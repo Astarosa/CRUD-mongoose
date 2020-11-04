@@ -35,10 +35,11 @@ const asyncErrorHandler = (controller) => {
 app.use(bodyParser.json());
 
 app.get("/api/wilders", asyncErrorHandler(WildersController.getAll));
-app.post("/api/wilder", WildersController.create);
-app.put("/api/wilder/:wilderId", asyncErrorHandler(WildersController.update));
-app.delete("/api/wilders", WildersController.removeAll);
-// app.delete('/api/wilders/:wilderId', WildersController.remove);
+app.get("/api/wilders/:wilderId", asyncErrorHandler(WildersController.getOne));
+app.post("/api/wilders", asyncErrorHandler(WildersController.create));
+app.put("/api/wilders/:wilderId", asyncErrorHandler(WildersController.updateOne));
+app.delete("/api/wilders", asyncErrorHandler(WildersController.removeAll));
+app.delete("/api/wilders/:wilderId", asyncErrorHandler(WildersController.removeOne));
 
 app.use("*", (req, res) => {
   res.status(404).json({ error: "not found" });

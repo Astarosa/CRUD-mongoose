@@ -1,36 +1,35 @@
-# http
-POST http://localhost:3001/api/wilder HTTP/1.1
+### Create Document
+POST http://localhost:3001/api/wilders HTTP/1.1
 Content-Type: application/json
 
 {
-  "name": "Test40",
-  "city": "Paris",
+  "name": "Test68",
+  "city": "Lyon",
   "skills": [
     { "title": "express", "count": 6 }
   ]
 }
 
-###
-
-GET http://localhost:3001/api/wilder/getAll HTTP/1.1
-
-###
-
+### Get All Documents
 GET http://localhost:3001/api/wilders HTTP/1.1
 
-###
+### Get One Document
+GET http://localhost:3001/api/wilders/5fa2dde94ccc2a5c2f9a2c63 HTTP/1.1
 
-PUT http://localhost:3001/api/wilder/5fa26a94306c523f556f2184 HTTP/1.1
+### Update One Document
+PUT http://localhost:3001/api/wilders/5fa2ddaf4ccc2a5c2f9a2c61 HTTP/1.1
 Content-Type: application/json
 
 {
-  "name": "Test33",
-  "city": "Paris",
+  "name": "Test40",
+  "city": "Lille",
   "skills": [
-    { "title": "express", "count": 5 }
+    { "title": "express", "count": 2 }
   ]
 }
 
-###
+### Delete One Document
+DELETE http://localhost:3001/api/wilders/5fa2ee3699d25290b0732a3b HTTP/1.1
 
+### Delete All Documents
 DELETE http://localhost:3001/api/wilders HTTP/1.1
