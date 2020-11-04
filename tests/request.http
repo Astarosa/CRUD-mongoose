@@ -1,0 +1,36 @@
+# http
+POST http://localhost:3001/api/wilder HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Test40",
+  "city": "Paris",
+  "skills": [
+    { "title": "express", "count": 6 }
+  ]
+}
+
+###
+
+GET http://localhost:3001/api/wilder/getAll HTTP/1.1
+
+###
+
+GET http://localhost:3001/api/wilders HTTP/1.1
+
+###
+
+PUT http://localhost:3001/api/wilder/5fa26a94306c523f556f2184 HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Test33",
+  "city": "Paris",
+  "skills": [
+    { "title": "express", "count": 5 }
+  ]
+}
+
+###
+
+DELETE http://localhost:3001/api/wilders HTTP/1.1
