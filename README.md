@@ -1,3 +1,3 @@
 # CRUD-mongoose
 
-Preuvde de concept pour la Wild Code School
+Preuve de de concept pour la Wild Code School
