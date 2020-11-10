@@ -3,7 +3,7 @@ POST http://localhost:3001/api/wilders HTTP/1.1
 Content-Type: application/json
 
 {
-  "name": "Test68",
+  "name": "Baptiste",
   "city": "Lyon",
   "skills": [
     { "title": "express", "count": 6 }
